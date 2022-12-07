@@ -3,15 +3,15 @@ i{
 }
 
 .card-deck{
-    display: inline-block;
-    margin-left: 270px;
+    display:flow-root;
+    max-width: 845px;
 }
 
 .card{
     /* height: 330px;
     width: 380px; */
     height: 270px;
-    width: 270px;
+    width: 260px;
     margin: 5px;
     float: left;
 }
