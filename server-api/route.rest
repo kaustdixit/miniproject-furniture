@@ -1,0 +1,42 @@
+GET http://localhost:3000/products
+
+###
+
+GET http://localhost:3000/products/638e16ebcfaf1fd22266ae49
+
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name" : "Aesthetic Sofa Set - With Chair",
+    "imageurl" : "https://cdn.pixabay.com/photo/2018/07/31/20/08/interior-3575819__480.jpg",
+    "category" : "dining",
+    "price" : 130000,
+    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non nisi. Non pulvinar neque laoreet suspendisse interdum consectetur.",
+    "rating" : 4
+}
+
+###
+
+DELETE http://localhost:3000/products/638e16ebcfaf1fd22266ae49
+
+###
+
+PATCH http://localhost:3000/products/638ed3dc0ed5b3eec572dc51
+Content-Type: application/json
+
+{
+    "category":"living"
+}
+
+# {
+#     "name" : "testing",
+#     "imageurl" : "testurl",
+#     "category" : "testcat",
+#     "price" : 200,
+#     "description" : "testdesc",
+#     "rating" : 1
+
+# }
