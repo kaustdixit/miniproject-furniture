@@ -5,11 +5,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { ListingpageComponent } from './listingpage/listingpage.component';
-import { ProductpageComponent } from './productpage/productpage.component';
-import { CarouselComponent } from './homepage/carousel/carousel.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { ListingpageComponent } from './components/listingpage/listingpage.component';
+import { ProductpageComponent } from './components/productpage/productpage.component';
+import { CarouselComponent } from './components/homepage/carousel/carousel.component';
 
 @NgModule({
   declarations: [
