@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-//Getting One
+//Getting One using ID
 router.get('/:id', getProduct, (req, res) => {
     // res.send(res.ProductById.name)
     res.json(res.ProductById);
@@ -24,6 +24,7 @@ router.post('/', async (req, res) => {
         id: req.body.id,
         name: req.body.name,
         imageurl: req.body.imageurl,
+        coll: req.body.coll,
         category: req.body.category,
         price: req.body.price,
         description: req.body.description,
@@ -48,6 +49,9 @@ router.patch('/:id', getProduct, async (req, res) => {
     }
     if (req.body.category != null) {
         res.ProductById.category = req.body.category;
+    }
+    if (req.body.coll != null) {
+        res.ProductById.coll = req.body.coll;
     }
     if (req.body.price != null) {
         res.ProductById.price = req.body.price;

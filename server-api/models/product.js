@@ -9,7 +9,7 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    category: {
+    coll: {
         type: String,
         required: true
     },
@@ -25,7 +25,7 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    label: {
+    category: {
         type: String,
         required: true
     }

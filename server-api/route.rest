@@ -2,7 +2,7 @@ GET http://localhost:3000/products
 
 ###
 
-GET http://localhost:3000/products/638e16ebcfaf1fd22266ae49
+GET http://localhost:3000/products/639189e26da5e45b350034f9
 
 ###
 
@@ -10,12 +10,13 @@ POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-    "name" : "Aesthetic Sofa Set - With Chair",
-    "imageurl" : "https://cdn.pixabay.com/photo/2018/07/31/20/08/interior-3575819__480.jpg",
-    "category" : "dining",
-    "price" : 130000,
-    "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non nisi. Non pulvinar neque laoreet suspendisse interdum consectetur.",
-    "rating" : 4
+    "name" : "Small Book Shelf",
+    "imageurl" : "https://cdn.pixabay.com/photo/2014/01/21/01/53/wood-248882__480.jpg",
+    "coll" : "library",
+    "price" : 20000,
+    "description" : "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo rerum quisquam, veniam hic corporis nulla soluta nesciunt, corrupti quae exercitationem incidunt maxime dolor perferendis a laudantium iure dolores beatae fugiat architecto nisi eaque! Laboriosam, eius temporibus. Nihil inventore optio iste!",
+    "rating" : 1,
+    "category" : "shelf"
 }
 
 ###
@@ -24,19 +25,19 @@ DELETE http://localhost:3000/products/638e16ebcfaf1fd22266ae49
 
 ###
 
-PATCH http://localhost:3000/products/638ed3dc0ed5b3eec572dc51
+PATCH http://localhost:3000/products/6391a4126da5e45b35003531
 Content-Type: application/json
 
 {
-    "category":"living"
+    "name":"Coffee table"
 }
 
 # {
-#     "name" : "testing",
-#     "imageurl" : "testurl",
-#     "category" : "testcat",
-#     "price" : 200,
-#     "description" : "testdesc",
-#     "rating" : 1
-
+#     "name" : "Aesthetic Sofa Set - With Chair",
+#     "imageurl" : "https://cdn.pixabay.com/photo/2018/07/31/20/08/interior-3575819__480.jpg",
+#     "coll" : "dining",
+#     "price" : 130000,
+#     "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non nisi. Non pulvinar neque laoreet suspendisse interdum consectetur.",
+#     "rating" : 4,
+#     "category" : "sofa, chair"
 # }
