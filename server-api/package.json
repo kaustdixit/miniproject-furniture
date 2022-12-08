@@ -1,7 +1,7 @@
 {
   "name": "server-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "API - Node, Express JS, MongoDB",
   "main": "index.js",
   "scripts": {
     "devStart" : "nodemon server.js"

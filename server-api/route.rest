@@ -25,11 +25,11 @@ DELETE http://localhost:3000/products/638e16ebcfaf1fd22266ae49
 
 ###
 
-PATCH http://localhost:3000/products/6391a4126da5e45b35003531
+PATCH http://localhost:3000/products/639189e26da5e45b350034f9
 Content-Type: application/json
 
 {
-    "name":"Coffee table"
+    "name":"Breakout Table Chair"
 }
 
 # {
