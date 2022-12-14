@@ -21,15 +21,18 @@ router.get('/:id', getProduct, (req, res) => {
 // Creating One
 
 router.post('/', async (req, res) => {
+    const schemafields = {};
+    ( schemafields.id, schemafields.name, schemafields.imageurl, schemafields.coll, schemafields.category, schemafields.price, schemafields.schemafields.description, schemafields.rating ) = req.body;
+
     const ProductEntry = new product({
-        id: req.body.id,
-        name: req.body.name,
-        imageurl: req.body.imageurl,
-        coll: req.body.coll,
-        category: req.body.category,
-        price: req.body.price,
-        description: req.body.description,
-        rating: req.body.rating,
+        id: schemafields.id,
+        name: schemafields.name,
+        imageurl: schemafields.imageurl,
+        coll: schemafields.coll,
+        category: schemafields.category,
+        price: schemafields.price,
+        description: schemafields.description,
+        rating: schemafields.rating,
     });
 
     try {
@@ -42,7 +45,8 @@ router.post('/', async (req, res) => {
 
 // Updating One
 router.patch('/:id', getProduct, async (req, res) => {
-    const {formData} = {req.body.name};
+    const schemafields = {};
+    ( schemafields.id, schemafields.name, schemafields.imageurl, schemafields.coll, schemafields.category, schemafields.price, schemafields.schemafields.description, schemafields.rating ) = req.body;
 
     if (req.body.name !== null) {
         res.ProductById.name = name;
