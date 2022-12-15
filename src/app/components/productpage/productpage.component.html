@@ -1,34 +1,39 @@
-<div class="row" >
-    <section class="col-6 card noborder">
-        <img src="https://cdn.pixabay.com/photo/2016/11/19/17/25/furniture-1840463__480.jpg" class="card-img">
-    </section>
-    <section class="col-6">
-        <div class="card noborder">
-            <div class="card-header">
-              Collection
-            </div>
-            <div class="card-body">
-              <h4 class="card-title">Chairs and Tables</h4>
-              <br>
-              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, iste! Consequatur labore maiores molestiae voluptate, reiciendis doloribus quo vero iste ullam ea quasi provident tempora asperiores nesciunt eaque, dolore voluptates suscipit accusantium! Distinctio dolores temporibus rem libero dolorum doloribus quis!</p>
-              <br>
-              <div class="row">
-                <div class="col-sm-8">
-                    <span class="card-text grey">Price per unit</span>
-                    <h4 class="card-title">120000 INR</h4>
-                </div>
-                <div class="col-sm-4" style="margin-top: 5px;">
-                    <span class="card-text grey">Rating</span>
-                    <button type="button" class="btn btn-success" style="margin-left: 20px;">5</button>
-                </div>
-              </div>
-              <br>
-              <div class="buybtn">
-                <a href="#" class="btn btn-dark">Buy Now</a>
-              </div>
-            </div>
+<div class="row">
+  <section class="col-6 card noborder">
+    <img class="card-img"
+      src="{{ oneProd.imageurl }}">
+  </section>
+  <section class="col-6">
+    <div class="card noborder">
+      <div class="card-header">
+        {{ oneProd.coll }}
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">{{ oneProd.name }}</h4>
+        <br>
+        <p class="card-text">{{ oneProd.description }}</p>
+        <br>
+        <div class="row">
+          <div class="col-sm-8">
+            <span class="card-text grey">Price per unit</span>
+            <h4 class="card-title">{{ oneProd.price }} INR</h4>
           </div>
-    </section>
+          <div class="col-sm-4"
+            style="margin-top: 5px;">
+            <span class="card-text grey">Rating</span>
+            <button type="button"
+              class="btn btn-success"
+              style="margin-left: 20px;">{{ oneProd.rating }}</button>
+          </div>
+        </div>
+        <br>
+        <div class="buybtn">
+          <a href="#"
+            class="btn btn-dark">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 <br>
 <hr>
