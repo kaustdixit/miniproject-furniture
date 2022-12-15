@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { ListingpageComponent } from './components/listingpage/listingpage.component';
+import { ProductpageComponent } from './components/productpage/productpage.component';
 
-import { HomepageComponent } from './homepage/homepage.component';
-import { ListingpageComponent } from './listingpage/listingpage.component';
-import { ProductpageComponent } from './productpage/productpage.component';
 
 const routes: Routes = [
   {path : "", component : HomepageComponent},

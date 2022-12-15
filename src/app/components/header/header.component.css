@@ -1,0 +1,29 @@
+nav {
+  letter-spacing: 2.5px;
+  margin-top: 7px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-nav {
+  display: flex;
+}
+
+.left-nav li {
+  display: inline;
+  margin-right: 50px;
+}
+
+button {
+  font-size: small;
+}
+
+a {
+  font-weight: bold;
+  color: black;
+  text-decoration: solid;
+}
