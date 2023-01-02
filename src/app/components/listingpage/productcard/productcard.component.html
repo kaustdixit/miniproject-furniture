@@ -1,20 +1,20 @@
  <div class="card-deck">
-     <div class="card"
-       *ngFor="let product of productData">
-       <img class="card-img-top"
-         [src]="product.imageurl"
-         [alt]="product.name">
-       <div class="card-body row">
-         <div class="col-sm-7"
-           style="text-align: left;">
-           <h6 class="card-title">{{ product.name }}</h6>
-           <p class="card-text"><small class="text-muted">{{ product.coll }}</small></p>
-         </div>
-         <div class="col-sm-5"
-           style="text-align: right;">
-           <h5 class="card-title">130000</h5>
-           <p><a [routerLink]="['/Product', product.name]"><i class="bi bi-box-arrow-up-right"></i></a></p>
-         </div>
+   <div class="card"
+     *ngFor="let product of productData">
+     <img class="card-img-top"
+       [src]="product.imageurl"
+       [alt]="product.name">
+     <div class="card-body row">
+       <div class="col-sm-7"
+         style="text-align: left;">
+         <h6 class="card-title">{{ product.name }}</h6>
+         <p class="card-text"><small class="text-muted">{{ product.coll }}</small></p>
+       </div>
+       <div class="col-sm-5"
+         style="text-align: right;">
+         <h5 class="card-title">130000</h5>
+         <p><a [routerLink]="['/Product', product._id.$oid.toString()]"><i class="bi bi-box-arrow-up-right"></i></a></p>
        </div>
      </div>
+   </div>
  </div>
