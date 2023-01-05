@@ -1,0 +1,45 @@
+.tiles{
+  position: absolute;
+  top: 808px;
+  color: white;
+  width: 120px;
+  height: 33px;
+  background-color: rgb(42, 42, 187);
+  line-break: auto;
+}
+
+.hometile1-text {
+  position: absolute;
+  left: 51px;
+}
+
+.hometile2-text {
+  position: absolute;
+  left: 430px;
+}
+
+.hometile3-text {
+  position: absolute;
+  left: 810px;
+}
+
+.hometile img {
+  width: 360px;
+  height: 230px;
+  border-radius: 8px;
+  line-break: auto;
+}
+
+.tiles h4{
+  margin-left: 12px;
+}
+
+.tiles::after{
+  content: ' ';
+  white-space: pre;
+}
+
+.carousel-component::after{
+  content: ' ';
+  white-space: pre;
+}
