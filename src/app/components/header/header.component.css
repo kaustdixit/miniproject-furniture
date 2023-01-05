@@ -1,5 +1,5 @@
 nav{
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     margin-top: 7px;
 }
 
@@ -18,7 +18,7 @@ header{
     margin-right: 50px;
 }
 
-button{
+.btn{
     font-size: small;
 }
 
