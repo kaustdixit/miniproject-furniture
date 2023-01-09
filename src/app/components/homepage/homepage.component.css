@@ -28,6 +28,7 @@
   height: 230px;
   border-radius: 8px;
   line-break: auto;
+  cursor: pointer;
 }
 
 .tiles h4{
@@ -42,4 +43,8 @@
 .carousel-component::after{
   content: ' ';
   white-space: pre;
+}
+
+.carousel-component{
+  cursor: pointer;
 }

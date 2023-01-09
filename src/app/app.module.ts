@@ -12,6 +12,7 @@ import { ProductpageComponent } from './components/productpage/productpage.compo
 import { LoginComponent } from './components/header/login/login.component';
 import { ProductcardComponent } from './components/listingpage/productcard/productcard.component';
 import { CarouselComponent } from './components/homepage/carousel/carousel.component';
+import { FilterComponent } from './components/listingpage/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarouselComponent } from './components/homepage/carousel/carousel.compo
     ProductpageComponent,
     ProductcardComponent,
     CarouselComponent,
-    LoginComponent
+    LoginComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

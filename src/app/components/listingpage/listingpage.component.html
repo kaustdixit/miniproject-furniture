@@ -1,1 +1,8 @@
-<app-productcard [productData]="productData"></app-productcard>
+<div class="row">
+  <section class="col-3" style="height: max-content;">
+      <app-filter></app-filter>
+  </section>
+  <section class="col-9">
+      <app-productcard [productData]="productData"></app-productcard>
+  </section>
+</div>

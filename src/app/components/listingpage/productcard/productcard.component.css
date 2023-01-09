@@ -4,17 +4,22 @@ i {
 
 .card-deck {
   display: inline-block;
-  margin-left: 270px;
 }
 
 .card {
   height: 270px;
-  width: 270px;
+  width: 250px;
   margin: 5px;
   float: left;
 }
 
 .card img {
-  max-width: 270px;
+  max-width: 250px;
   max-height: 180px;
+}
+
+button{
+  border: none;
+  color: blue;
+  background-color: white;
 }
