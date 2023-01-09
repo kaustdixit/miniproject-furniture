@@ -1,12 +1,12 @@
-nav {
-  letter-spacing: 2.5px;
-  margin-top: 7px;
+nav{
+    letter-spacing: 2px;
+    margin-top: 7px;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .right-nav {
@@ -18,8 +18,8 @@ header {
   margin-right: 50px;
 }
 
-button {
-  font-size: small;
+.btn{
+    font-size: small;
 }
 
 a {
