@@ -8,13 +8,17 @@ import { BehaviorSubject } from 'rxjs';
 export class AuthService {
   private Url: string = 'https://localhost:7285/api/User/authenticate';
   constructor(private http: HttpClient) {}
-  private user$=new BehaviorSubject<string>('');
+  private user$ = new BehaviorSubject<string>('');
 
   login(loginObj: any) {
     return this.http.post<any>(`${this.Url}`, loginObj);
   }
 
-  getuserdetails(){
+  getuserdetails() {
     return this.user$.asObservable();
+  }
+
+  setuserdetails(username: string) {
+    this.user$.next(username);
   }
 }

@@ -7,11 +7,13 @@
     </ul>
   </nav>
   <nav class="right-nav">
-    <ng-container *ngIf="{userdetail : authService.getuserdetails() | async } as state">
+    <div *ngIf="!username">
       <button type="button"
         class="btn btn-success"
-        [routerLink]="['/login']"
-        *ngIf="!state.userdetail">Login</button>
-    </ng-container>
+        [routerLink]="['/login']">Login</button>
+    </div>
+    <div *ngIf="username">
+      Welcome <span class="fw-bold">{{username}}</span>
+    </div>
   </nav>
 </header>

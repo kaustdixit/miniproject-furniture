@@ -33,12 +33,14 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value);
     this.auth.login(this.loginForm.value).subscribe({
       next: (res) => {
-        alert(res.message);
-        this.loginForm.reset();
+        // alert(res.message);
         this.router.navigate(['List']);
+        this.auth.setuserdetails(this.loginForm.value.username);
+        this.loginForm.reset();
       },
       error: (err) => {
         alert(err?.error.message);
+        this.loginForm.reset();
       },
     });
   }
