@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LoginComponent } from './components/header/login/login.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { ListingpageComponent } from './components/listingpage/listingpage.component';
 import { ProductpageComponent } from './components/productpage/productpage.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path : "Home", component : HomepageComponent},
   {path : "List", component : ListingpageComponent},
   {path : "Product/:id", component : ProductpageComponent},
+  {path : "login", component: LoginComponent}
 ];
 
 @NgModule({
