@@ -6,7 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/test/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value);
     this.auth.login(this.loginForm.value).subscribe({
       next: (res) => {
-        // alert(res.message);
         this.router.navigate(['List']);
         this.auth.setuserdetails(this.loginForm.value.username);
         this.loginForm.reset();

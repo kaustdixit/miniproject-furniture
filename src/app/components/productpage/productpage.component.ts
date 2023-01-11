@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { mockProductData } from 'src/app/test/product.test';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-productpage',
@@ -8,16 +8,26 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./productpage.component.css'],
 })
 export class ProductpageComponent implements OnInit {
+  public data: any;
   public productDataone: any[] = [];
-  oneProd: any = {};
-  constructor(private activatedRouteObj: ActivatedRoute) {}
-  ngOnInit(): void {
-    this.productDataone = mockProductData;
+  public oneProd: any = {};
+  constructor(
+    private activatedRouteObj: ActivatedRoute,
+    private httpClient: HttpClient
+  ) {}
 
-    let no = this.activatedRouteObj.snapshot.params['id'];
-    this.oneProd = this.productDataone.find((item) => item._id.$oid === no);
-    console.log(no);
-    console.log(this.oneProd);
-    console.log(this.productDataone);
+  ngOnInit(): void {
+    this.getData();
+  }
+
+  getData() {
+    this.httpClient
+      .get<any>('http://localhost:3000/products')
+      .subscribe((res) => {
+        this.data = res;
+        this.productDataone = this.data;
+        let no = this.activatedRouteObj.snapshot.params['id'];
+        this.oneProd = this.productDataone.find((item) => item._id === no);
+      });
   }
 }

@@ -31,6 +31,7 @@ import { FilterComponent } from './components/listingpage/filter/filter.componen
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

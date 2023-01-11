@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
 })
 export class ProductcardComponent {
   constructor(private router: Router) {}
-  @Input() public productData: any;
+  @Input() public data: any;
 
   public clickMe(test: any) {
     this.router.navigate([`Product/${test}`]);
-    let id:number = test;
-    console.log(id); 
+    let id: number = test;
+    console.log(id);
   }
 }

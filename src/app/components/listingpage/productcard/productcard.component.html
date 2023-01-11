@@ -1,6 +1,6 @@
  <div class="card-deck">
    <div class="card"
-     *ngFor="let product of productData">
+     *ngFor="let product of data">
      <img class="card-img-top"
        [src]="product.imageurl"
        [alt]="product.name">
@@ -13,7 +13,8 @@
        <div class="col-sm-5"
          style="text-align: right;">
          <h5 class="card-title">&#8377;{{ product.price }}</h5>
-         <p><button type="button" (click)="clickMe(product._id.$oid)"><i class="bi bi-box-arrow-up-right"></i></button>
+         <p><button type="button"
+             (click)="clickMe(product._id)"><i class="bi bi-box-arrow-up-right"></i></button>
          </p>
        </div>
      </div>
