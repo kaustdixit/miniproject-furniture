@@ -1,8 +1,10 @@
-﻿using AuthAPI.Context;
+using AuthAPI.Context;
+using AuthAPI.Helpers;
 using AuthAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace AuthAPI.Controllers
 {
@@ -23,11 +25,20 @@ namespace AuthAPI.Controllers
             if(userObj == null)
                 return BadRequest();
 
-            var user = await _authContext.users.FirstOrDefaultAsync(x => x.Username== userObj.Username && x.Password== userObj.Password);
+            var user = await _authContext.users.FirstOrDefaultAsync(x => x.Username== userObj.Username);
+            
             if (user == null)
                 return NotFound(new { Message = "User Not Found" });
+
+            if (!PasswordHasher.VerifyPassword(userObj.Password, user.Password))
+            {
+                return BadRequest(new { Message = "Inorrect Password" });
+            }
             
-            return Ok(new {Message = "Login Success!"});
+            return Ok(new
+            {
+              Message = "Login Success!"
+            });
         }
 
         [HttpPost("register")]
@@ -37,9 +48,27 @@ namespace AuthAPI.Controllers
             if(userObj == null)
                 return BadRequest();
 
+            if (await CheckUsernameExist(userObj.Username))
+                return BadRequest(new { Message = "Username Already Exists!" });
+
+            if (await CheckEmailExist(userObj.Email))
+                return BadRequest(new { Message = "Email Already Exists!" });
+
+            userObj.Password = PasswordHasher.HashPassword(userObj.Password);
+            userObj.Token = "";
+            userObj.Role = "Admin";
             await _authContext.users.AddAsync(userObj);
             await _authContext.SaveChangesAsync();
             return Ok(new { Message = "User Added!" });
         }
-    }
+
+        private Task<bool> CheckUsernameExist(string username)
+        {
+            return _authContext.users.AnyAsync(entry => entry.Username == username);
+        }
+        private Task<bool> CheckEmailExist(string email)
+        {
+          return _authContext.users.AnyAsync(entry => entry.Email == email);
+        }
+  }
 }
