@@ -92,7 +92,7 @@ namespace AuthAPI.Controllers
             var tokenDescriptor = new SecurityTokenDescriptor
             {
               Subject = payload,
-              Expires = DateTime.UtcNow.AddMinutes(60),
+              Expires = DateTime.UtcNow.AddMinutes(45),
               SigningCredentials = credentials
             };
 

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   private Url: string = 'https://localhost:7285/api/User/authenticate';
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
   private user$ = new BehaviorSubject<string>('');
 
   login(loginObj: any) {
@@ -20,5 +21,13 @@ export class AuthService {
 
   setuserdetails(username: string) {
     this.user$.next(username);
+  }
+
+  storeToken(tokenValue: string){
+    sessionStorage.setItem('token', tokenValue);
+  }
+
+  isLoggedIn(){
+    return !!sessionStorage.getItem('token');
   }
 }

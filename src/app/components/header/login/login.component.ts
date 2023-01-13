@@ -33,9 +33,10 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value);
     this.auth.login(this.loginForm.value).subscribe({
       next: (res) => {
+        this.auth.storeToken(res.token);
         this.router.navigate(['List']);
         this.auth.setuserdetails(this.loginForm.value.username);
-        this.loginForm.reset();
+        // this.loginForm.reset();
       },
       error: (err) => {
         alert(err?.error.message);
